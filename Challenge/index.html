@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML and JavaScript</title>
+    <script>
+        var imgArray = new Array(4);   // <-- now 6 images
+        var index = 0;
+
+        function startup() {
+            imgArray[0] = new Image;
+            imgArray[0].src = "logo.jpg"; // Replace with your 6 images
+            imgArray[1] = new Image;
+            imgArray[1].src = "sushi-bar.jpg";
+            imgArray[2] = new Image;
+            imgArray[2].src = "sushi-hero.jpg";
+            imgArray[3] = new Image;
+            imgArray[3].src = "sushi-plate.jpg";
+            cycle(); // Start the animation
+        }
+
+     function cycle() {
+            document.slideshow.src = imgArray[index].src;
+            index++;
+
+            if (index >= imgArray.length) {
+                index = 0; // Loop
+            }
+
+            setTimeout(cycle, 2000); // Change every 2 seconds
+        }
+    </script>
+		
+</head>
+
+<body onLoad="startup()">
+    <div align="center">
+        <h2>My JavaScript Animated Slide Show</h2>
+
+        <p>
+            <img name="slideshow" src="logo.jpg" width="500">
+        </p>
+
+    </div>
+</body>
+</html>
