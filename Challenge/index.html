@@ -3,19 +3,19 @@
 <head>
     <title>HTML and JavaScript</title>
     <script>
-        var imgArray = new Array(4);   // <-- now 6 images
+        var imgArray = new Array(4); 
         var index = 0;
 
         function startup() {
             imgArray[0] = new Image;
-            imgArray[0].src = "logo.jpg"; // Replace with your 6 images
+            imgArray[0].src = "logo.jpg"; 
             imgArray[1] = new Image;
             imgArray[1].src = "sushi-bar.jpg";
             imgArray[2] = new Image;
             imgArray[2].src = "sushi-hero.jpg";
             imgArray[3] = new Image;
             imgArray[3].src = "sushi-plate.jpg";
-            cycle(); // Start the animation
+            cycle();
         }
 
      function cycle() {
@@ -26,7 +26,7 @@
                 index = 0; // Loop
             }
 
-            setTimeout(cycle, 2000); // Change every 2 seconds
+            setTimeout(cycle, 2000); 
         }
     </script>
 		
@@ -43,3 +43,4 @@
     </div>
 </body>
 </html>
+
